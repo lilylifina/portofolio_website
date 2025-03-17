@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Lily Fitri Hasanah</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff5f8;
+            color: #681833;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #f789b2;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .navbar div {
+            display: flex;
+            gap: 30px;
+            margin-right: 100px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #681833;
+        }
+        .container {
+            width: 80%;
+            margin: 80px auto;
+            text-align: center;
+           
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #681833;
+            margin-bottom: 5px;
+        }
+        /* p.subtitle {
+            font-size: 18px;
+            color: #888;
+            margin-bottom: 40px;
+        } */
+        .education-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; /* Menyamakan tinggi kedua kolom */
+            gap: 30px; /* Menambahkan jarak antar kolom */
+        }
+        .column {
+            width: 50%;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid #f789b2;
+            flex-grow: 1; /* Membuat tinggi konten menyesuaikan */
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #f789b2;
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+        h3 {
+            color: #681833;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        span.date {
+            display: inline-block;
+            background: #f789b2;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span style="color: white; font-size: 20px; font-weight: bold;">LIFINA.</span>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="licenses.html">Licenses & Certifications</a>
+            <a href="#volunteer">Volunteer</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Education</h1>
+
+        <!-- <p class="subtitle">- check my resume -</p> -->
+        
+        <div class="education-section">
+            <div class="column">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>BACHELOR OF INFORMATICS ENGINEERING</h3>
+                        <span class="date">2022 - Present</span>
+                        <p>Institut Teknologi PLN, DKI Jakarta, ID</p>
+                        <p>Major: Informatics Engineering</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>SENIOR HIGH SCHOOL</h3>
+                        <span class="date">2019 - 2022</span>
+                        <p>MAN 1 Mandailing Natal, North Sumatera, ID
+                        <p>Major: Natural Sciences </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="column">
+                <h2>Training & Workshop</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>UI/UX DESIGN CLASS</h3>
+                        <span class="date">October 2022</span>
+                        <p>KT&G SangSang University, ID</p>
+                        <p>• Introduction about UI/UX Design</p>
+                        <p>• Tools and Process of UI and UX Design</p>
+                        <p>• Process to start first career as UI Designer</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>UI/UX DESIGN WORKSHOP</h3>
+                        <span class="date">July 2022</span>
+                        <p>Institut Teknologi PLN, ID</p>
+                        <p>• Interactive Prototype using Figma</p>
+                        <p>• Creating Design Thinking & Building Design System</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>BASIC ENGLISH EDUCATION STANDARDIZATION</h3>
+                        <span class="date">January 2022</span>
+                        <p>Language Development Center, Institut Teknologi PLN, ID</p>
+                        <p>• Understand the main points of clear standard input</p>
+                        <p>• Can deal with most situations likely to arise whilst travelling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Lily Fitri Hasanah</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #681833;
+            display: flex;
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #f789b2;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .navbar div {
+            display: flex;
+            gap: 30px;
+            margin-right: 100px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #681833;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            padding-top: 60px;
+        }
+        .text-content {
+            width: 60%;
+            padding: 40px 60px;
+            overflow-y: auto;
+            height: 100vh;
+            text-align: justify;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+        h1 {
+            font-size: 40px;
+            color: #681833;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .chart-container {
+            width: 450px;
+            height: 300px;
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffe6f2;
+            border-radius: 15px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1s 0.5s forwards;
+        }
+        .image-gallery {
+            width: 40%;
+            height: 100vh;
+            width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            padding: 70px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 0px;
+            top: 22px;
+            bottom: 0px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.5s;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span style="color: white; font-size: 20px; font-weight: bold;">Lifina.</span>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="licenses.html">Licenses & Certifications</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>About Me</h1>
+            <p>Hello! I am Lily Fitri Hasanah Nasution, a 6th semester student in the Department of Informatics Engineering, Faculty of Energy Telematics, PLN Institute of Technology. I have a great interest in technology development and education.</p>
+            <p>I am active in a variety of activities, including organizations, social projects, and competitions related to research and technology. I believe that every individual has extraordinary potential, and I always strive to develop myself and make a positive impact on those around me.</p>
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
+        <div class="image-gallery">
+            <img src="or6.jpg" alt="Image 1">
+            <img src="or4.jpg" alt="Image 2">
+            <img src="or7.jpg" alt="Image 3">
+            <img src="or2.jpg" alt="Image 4">
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Programming', 'Leadership', 'Communication', 'Problem Solving', 'Teamwork'],
+                datasets: [{
+                    label: 'Skill Level',
+                    data: [90, 80, 85, 75, 95],
+                    backgroundColor: ['#f789b2', '#f789b2', '#f789b2', '#f789b2', '#f789b2'],
+                    borderRadius: 12,
+                    hoverBackgroundColor: '#ff1493',
+                    barThickness: 40
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeInOutBounce'
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#ff1493',
+                        titleFont: { size: 16 },
+                        bodyFont: { size: 14 },
+                        padding: 10
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { stepSize: 20 },
+                        grid: { color: '#ffb3c6' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

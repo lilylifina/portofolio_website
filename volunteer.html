@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Lily Fitri Hasanah</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff5f8;
+            color: #681833;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #f789b2;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar.shrink {
+            padding: 10px 50px;
+            background-color: #f55e95;
+        }
+
+        .navbar div {
+            display: flex;
+            gap: 30px;
+            margin-right: 100px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #681833;
+            transform: scale(1.1);
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 120px auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards ease-in-out;
+        }
+
+        /* Animasi Judul */
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #681833;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideDown 1s forwards ease-in-out;
+        }
+
+        /* Volunteer Card */
+        .volunteer-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s forwards ease-in-out;
+        }
+
+        .volunteer-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .volunteer-logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .volunteer-content {
+            flex-grow: 1;
+        }
+
+        .volunteer-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .volunteer-company {
+            font-size: 18px;
+            font-weight: bold;
+            color: #681833;
+        }
+
+        .volunteer-date {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .volunteer-certificate {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Animasi */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar" id="navbar">
+        <span style="color: white; font-size: 20px; font-weight: bold;">LIFINA.</span>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="licenses.html">Licenses & Certifications</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Volunteer Experience</h1>
+
+        <div class="volunteer-card">
+            <img src="itpln.png" class="volunteer-logo" alt="Logo">
+            <div class="volunteer-content">
+                <div class="volunteer-title">Volunteer Pengabdian Masyarakat BEM KBM ITPLN</div>
+                <div class="volunteer-company">Institut Teknologi PLN</div>
+                <div class="volunteer-date">Jul 2023 - Agu 2023 • 2 bln</div>
+            </div>
+            <img src="pengabdian_masyarakat.png" class="volunteer-certificate" alt="Sertifikat">
+        </div>
+
+        <div class="volunteer-card">
+            <img src="gsm.png" class="volunteer-logo" alt="Logo">
+            <div class="volunteer-content">
+                <div class="volunteer-title">Event Staff Sharing Session GSM</div>
+                <div class="volunteer-company">Gerakan Sahabat Mengajar</div>
+                <div class="volunteer-date">Apr 2024 - Sekarang • 1 thn</div>
+            </div>
+            <img src="sertifgsm.png" class="volunteer-certificate" alt="Sertifikat">
+        </div>
+
+        <div class="volunteer-card">
+            <img src="logoaksos.png" class="volunteer-logo" alt="Logo">
+            <div class="volunteer-content">
+                <div class="volunteer-title">Koordinator PDD Donor Darah #1</div>
+                <div class="volunteer-company">Institut Teknologi PLN</div>
+                <div class="volunteer-date">Jun 2023 - Sekarang • 1 thn 10 bln</div>
+            </div>
+            <img src="sertifaksos.png" class="volunteer-certificate" alt="Sertifikat">
+        </div>
+
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            let navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shrink');
+            } else {
+                navbar.classList.remove('shrink');
+            }
+        });
+    </script>
+
+</body>
+</html>
